@@ -30,16 +30,18 @@ git push origin main
 
 ## Part 2 - Install Docker (assumes you are using Debian/Proxmox)
 
-Add Docker Community Edition repo to APT
+Add Docker Community Edition repo to APTx
 ```
+sudo apt update -y
+sudo apt install software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-apt update -y
+sudo apt update -y
 ```
 
 Install Docker-CE
 ```
-apt install docker-ce docker-ce-cli -y
+sudo apt install docker-ce docker-ce-cli -y
 ```
 
 Verify Docker is installed
@@ -49,6 +51,6 @@ docker version
 
 Enable and start Docker service
 ```
-systemctl enable docker
-systemctl start docker
+sudo systemctl enable docker
+sudo systemctl start docker
 ```
