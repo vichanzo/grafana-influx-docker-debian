@@ -54,3 +54,23 @@ Enable and start Docker service
 sudo systemctl enable docker
 sudo systemctl start docker
 ```
+
+## Part 3 - Create the TIG (Telegraf, InfluxDB, Grefana) stack 
+This is done using method from https://github.com/huntabyte/tig-stack 
+
+Copy the files from the huntabyte repository:
+```
+wget https://raw.githubusercontent.com/huntabyte/tig-stack/main/docker-compose.yml
+wget https://raw.githubusercontent.com/huntabyte/tig-stack/main/.env
+wget https://raw.githubusercontent.com/huntabyte/tig-stack/main/entrypoint.sh
+```
+
+Edit the Enrironment Variables in .env
+```
+nano .env
+```
+
+Custromize the telegraf.conf
+```
+nano telegraf.conf
+```
